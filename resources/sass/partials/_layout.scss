@@ -1,0 +1,100 @@
+* {
+  font-family: $font-family-sans-serif;
+  color: white;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(-225deg, #2CD8D5 0%, #6B8DD6 48%, #8E37D7 100%);
+}
+ 
+.navbar-custom {
+  padding: 15px 20px;
+  text-align: left;
+  box-shadow: 0 3px 14px rgb(0 0 0 / 50%);
+  -webkit-box-shadow: 0 3px 14px rgb(0 0 0 / 50%);
+  z-index: 1;
+  h1 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+
+  .select-date-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    .error-message {
+      color: crimson;
+    }
+    input {
+      font-size: 25px;
+      margin-bottom: 20px;
+      border: none;
+      background-color: transparent;
+    }
+    button {
+      padding: 7px;
+      font-size: 18px;
+      font-weight: 500;
+      text-transform: uppercase;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid white;
+      border-radius: 12px;
+      transition: 0.4s;
+      &:hover {
+        background: rgba(255,255,255,0.2);
+      }
+    }
+  }
+
+  .weather-container {
+    .forecast-date {
+      margin-bottom: 18px;
+      text-align: center;
+      font-size: 23px;
+      font-weight: 500;
+    }
+    .forecast-container {
+      .other-infos-container {
+        display: flex;
+      }
+      .city-forecast {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+        padding: 10px 35px;
+        background: rgba(255, 255, 255, 0.14);
+        border-radius: 10px;
+      }
+      .city-container {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        font-size: 28px;
+      }
+      .details-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .weather {
+          text-transform: capitalize;
+          font-weight: 500;
+        }
+      }
+    }
+    .back-btn {
+      background: none;
+      border: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
